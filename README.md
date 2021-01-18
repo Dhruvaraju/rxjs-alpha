@@ -16,7 +16,7 @@ learning log for rxjs
 - Use the following command to create an angular project.
   - ng new <<project-name>>
 
-## Streams in javascript
+## Example Streams in javascript
 
 - Continuous flow of data generated for an event
 - examples are eventListener, setInterval, setTimeout
