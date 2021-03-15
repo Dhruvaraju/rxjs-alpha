@@ -1,7 +1,11 @@
-# rxjs-alpha
+- [Learning rxjs](#learning-rxjs)
+  - [Streams in JavaScript](#streams-in-javascript)
+  - [Creating an angular project](#creating-an-angular-project)
+  - [Example Streams in javascript](#example-streams-in-javascript)
+  - [What problem does rxjs solve?](#what-problem-does-rxjs-solve)
+  - [What is rxjs?](#what-is-rxjs)
 
-learning log for rxjs
-
+# Learning rxjs
 ## Streams in JavaScript
 
 - Continuous flow of data that is responding to an event or data that is being sent manually responding to events.
@@ -36,3 +40,12 @@ let intervalTest = setInterval(() => {
   }
 }, 1000);
 ```
+## What problem does rxjs solve?
+When we nest a group of event streams, it will cause a situation call callback hell. Because when a parent stream is invoked twice the child there will be multiple child streams that are invoked.
+
+In the above example if we add the setInterval block inside the event for mouse click. Every time a mouse click is initiated it will trigger the function called by setInterval. We might have to perform the setInterval function after the completion of function, called by mouse click. Rxjs will help in dealing with ambiguous situations like this.
+
+> Due to nested callbacks in javascript, it will become hard to maintain code and readability. Which is called as **Callback hell**
+
+## What is rxjs?
+Rxjs stands for **Reactive extensions for javascript**. It helps to combine streams in a maintainable way. So it resolves callback hell.
